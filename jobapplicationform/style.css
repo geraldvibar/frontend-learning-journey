@@ -1,0 +1,97 @@
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Arial;
+
+}
+body{
+  display:flex;
+  min-height:100vh;
+
+  justify-content:center;
+  align-items:center;
+}
+.container h1{
+  text-align:center;
+  margin:0.5rem;
+}
+.container{
+  border:1px solid gray;
+  width:100%;
+  max-width:600px;
+border-radius:8px;
+padding:1rem;
+}
+
+.container form{
+  display:flex;
+  flex-direction:column;
+  gap:0.4rem;
+}
+
+form :is(input,select,textarea){
+  border-radius:2px;
+  padding:0.4rem 0.7rem;
+}
+
+ input:focus, textarea:focus{
+  border-color:black;
+ outline:none;
+}
+
+input:valid,select:valid,textarea:valid{
+border:1px solid green;
+}
+input:invalid,select:invalid,textarea:invalid{
+border:1px solid red;
+}
+
+form fieldset{
+  padding:0.5rem;
+  border-radius:2px;
+}
+
+form label:not(.radio-group label){
+  font-weight:600;
+}
+
+.radio-group input[type="radio"]{
+  appearance:none;
+  border-radius:50%;
+  height:20px;
+  width:20px;
+  vertical-align:bottom;
+    padding:4px;
+    cursor:pointer;
+}
+
+ input:first-of-type{
+  color:gray;
+}
+
+
+
+.radio-group input[type="radio"]:checked{
+  background:radial-gradient(circle,green 4px,transparent 5px);
+  border-color:green;
+  box-shadow:1px 0px 2px gray;
+
+}
+
+.radio-group input[type="radio"]:checked + label{
+  color:green;
+}
+
+form button{
+  color:white;
+  background-color:green;
+  border:none;
+  font-size:1rem;
+  padding:0.5rem 0;
+  border-radius:2px;
+}
+
+button:hover{
+  background-color:rgb(20, 81, 20);
+}
